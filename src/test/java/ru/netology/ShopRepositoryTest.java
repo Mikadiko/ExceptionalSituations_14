@@ -1,7 +1,7 @@
+package ru.netology;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ShopRepositoryTest {
 
@@ -17,14 +17,14 @@ class ShopRepositoryTest {
         repo.add(product2);
         repo.add(product3);
 
-        Product[] expected = { product1, product2, product3 };
+        Product[] expected = {product1, product2, product3};
         Product[] actual = repo.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void  shouldDeleteProductInRepository(){ //удаление продукта из репозитория
+    public void shouldDeleteProductInRepository() { //удаление продукта из репозитория
 
 
         repo.add(product1);  // добавили товары
@@ -39,7 +39,7 @@ class ShopRepositoryTest {
     }
 
     @Test
-    public void  shouldDeleteNonExistentProductFromRepository(){ //удаление несуществующего продукта
+    public void shouldDeleteNonExistentProductFromRepository() { //удаление несуществующего продукта
 
         repo.add(product1);  // добавили товары
         repo.add(product2);
